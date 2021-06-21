@@ -1,5 +1,6 @@
 # Determine whether the edit distance between two strings is less than 2.
 
+
 def one_away(str1, str2):
     len_diff = abs(len(str1) - len(str2))
     if len_diff > 1:
@@ -25,7 +26,8 @@ def one_away(str1, str2):
                 shift = 1
         return True
 
+
 if __name__ == "__main__":
     import sys
+
     print(one_away(sys.argv[-2], sys.argv[-1]))
-        

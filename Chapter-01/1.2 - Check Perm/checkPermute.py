@@ -1,5 +1,5 @@
+# Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
 
-#Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
 
 def is_permutation(str1, str2):
     counter = Counter()
@@ -13,11 +13,13 @@ def is_permutation(str1, str2):
             del counter[letter]
         return len(counter) == 0
 
+
 class Counter(dict):
     def __missing__(self, key):
         return 0
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     import sys
+
     print(is_permutation(sys.argv[-2], sys.argv[-1]))

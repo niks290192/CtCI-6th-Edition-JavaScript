@@ -23,6 +23,8 @@ def compression(string):
     else:
         return string
 
-if __name__ == "__main__"
+
+if __name__ == "__main__":
     import sys
+
     print(compression(sys.argv[-1]))

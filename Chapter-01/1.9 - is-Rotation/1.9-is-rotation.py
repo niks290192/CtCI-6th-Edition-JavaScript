@@ -2,10 +2,12 @@
 
 import unittest
 
+
 def is_rotation(s1, s2):
     if len(s1) != len(s2):
         return False
     return is_substring(s1 + s1, s2)
+
 
 def is_substring(s1, s2):
     if len(s2) > len(s1):
@@ -19,7 +21,6 @@ def is_substring(s1, s2):
         if is_substring_here:
             return True
     return False
-
 
 
 class Test(unittest.TestCase):
@@ -38,6 +39,7 @@ class Test(unittest.TestCase):
         self.assertTrue(is_substring(s1, s2))
         self.assertFalse(is_substring(s1, s3))
         self.assertFalse(is_substring(s1, s4))
+
 
 if __name__ == "__main__":
     unittest.main()
