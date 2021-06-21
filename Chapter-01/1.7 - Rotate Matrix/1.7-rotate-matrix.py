@@ -4,6 +4,7 @@
 
 import unittest
 
+
 def rotate_matrix(m):
     n = len(m)
     rotm = [None] * n
@@ -14,14 +15,15 @@ def rotate_matrix(m):
             rotm[n - col - 1][row] = m[row][col]
     return rotm
 
+
 def rotate_matrix_in_place(m):
     n = len(m)
-    for col in xrange(n/2):
+    for col in xrange(n / 2):
         for row in xrange(col, n - col - 1):
             temp1 = m[n - col - 1][row]
             m[n - col - 1][row] = m[row][col]
-            temp2 = m[n - row -1][n - col - 1]
-            m[n - row -1][n - col - 1] = temp1
+            temp2 = m[n - row - 1][n - col - 1]
+            m[n - row - 1][n - col - 1] = temp1
             temp1 = m[col][n - row - 1]
             m[col][n - row - 1] = temp2
             m[row][col] = temp1
@@ -32,7 +34,7 @@ class Test(unittest.TestCase):
         mat1 = [[1, 2], [3, 4]]
         mat2 = [[2, 4], [1, 3]]
         self.assertEqual(rotate_matrix(mat1), mat2)
-        mat3 =  [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        mat3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
         mat4 = [[3, 6, 9], [2, 5, 8], [1, 4, 7]]
         self.assertEqual(rotate_matrix(mat3), mat4)
         mat5 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
@@ -45,7 +47,7 @@ def test_rotate_matrix_in_place(self):
     mat2 = [[2, 4], [1, 3]]
     rotate_matrix_in_place(mat1)
     self.assertEqual(mat1, mat2)
-    mat3 =  [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    mat3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     mat4 = [[3, 6, 9], [2, 5, 8], [1, 4, 7]]
     rotate_matrix_in_place(mat3)
     self.assertEqual(mat3, mat4)
@@ -54,5 +56,6 @@ def test_rotate_matrix_in_place(self):
     rotate_matrix_in_place(mat5)
     self.assertEqual(mat5, mat6)
 
-if __name__ == "__main__"
+
+if __name__ == "__main__":
     unittest.main()
