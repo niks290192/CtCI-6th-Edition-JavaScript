@@ -8,7 +8,7 @@ def remove_duplicates(head):
     if node:
         value = {node.data: True}
         while node.next:
-            if node.next.data in values:
+            if node.next.data in value:
                 node.next = node.next.next
             else:
                 value[node.next.data] = True
