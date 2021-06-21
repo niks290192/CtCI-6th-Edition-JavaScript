@@ -6,7 +6,7 @@ import unittest
 def remove_duplicates(head):
     node = head
     if node:
-        value = { node.data: True }
+        value = {node.data: True}
         while node.next:
             if node.next.data in values:
                 node.next = node.next.next
@@ -16,10 +16,11 @@ def remove_duplicates(head):
     return head
 
 
-class Node():
+class Node:
     def __init__(self, data, next):
         self.data = data
         self.next = next
+
 
 class Test(unittest.TestCase):
     def test_remove_duplicates(self):
@@ -30,5 +31,6 @@ class Test(unittest.TestCase):
         self.assertEqual(head.next.next.data, 5)
         self.assertEqual(head.next.next.next, None)
 
+
 if __name__ == "__main__":
-  unittest.main()
+    unittest.main()
