@@ -6,7 +6,7 @@ import unittest
 
 def kth_to_last(head, k):
     lead, follow = head
-    for _ in xrange(k):
+    for _ in range(k):
         if not lead:
             return None
         lead = lead.next
