@@ -18,7 +18,6 @@ class Test(unittest.TestCase):
         self.assertFalse(is_power_of_two_or_zero(5))
         self.assertFalse(is_power_of_two_or_zero(6))
         self.assertFalse(is_power_of_two_or_zero(1000))
-
         self.assertTrue(is_power_of_two_or_zero(1024))
 
 
